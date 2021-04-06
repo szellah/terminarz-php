@@ -1,0 +1,860 @@
+
+.error_window{
+	color: #ff0000b0;
+}
+
+html, body {
+    height: 100%;
+}
+
+
+body{
+	background: rgba(250,235,182,0.67);
+	
+}
+
+
+
+
+.depth {
+	  position: absolute;
+	  left: 10%;
+    display: block;
+    padding: 50px;
+    color: rgba(0,0,0,0.5);
+    font-size: 2.5em;
+	  font-family: 'Merriweather';  
+}
+
+.depth:before, .depth:after {
+    content: attr(title);
+    padding: 50px;
+    color: rgba(255,255,255,0.1);
+    position: absolute;
+}
+
+.depth:before { top: 1px; left: 1px; }
+.depth:after  { top: 2px; left: 2px; }
+
+/*calendar page*/
+
+#calendar_page{
+	font-family: 'Roboto';
+	font-weight: 300;
+	border-style: solid;
+	border-color: rgba(0,0,0,0);
+	border-width: 1px;
+	box-shadow: 4px 4px 5px rgba(0,0,0,0.4);
+	margin-bottom: 5%;
+
+}
+
+#index #login_window #calendar_page{
+	border-radius: 15px 15px 15px 15px;
+		height: 80%;
+	  
+}
+
+#left_panel #info #calendar_page{
+	border-radius: 10px 10px 10px 10px;
+	height: 15rem;
+}
+
+#red_tab{
+	margin: 0;
+	padding: 0;
+	background: url('../media/calendar_pattern.png'), linear-gradient(180deg, rgba(232,44,44,1) 14%, rgba(208,6,6,1) 100%);
+  border: 1px solid rgba(1,1,1,0.1);
+}
+
+#index #login_window #calendar_page #red_tab{
+	border-radius: 15px 15px 0px 0px;
+	height: 17%;
+}
+
+#left_panel #info #calendar_page #red_tab{
+	border-radius: 10px 10px 0px 0px;
+	height: 20%;
+}
+
+
+
+
+#login_window{
+	//border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	width: 25rem;
+	height: 32rem;
+	text-align: center;
+}
+
+
+
+#index #login_window #calendar_page div{
+	width: 100%;
+}
+
+#left_panel #info #calendar_page div{
+	text-align: center;
+	width: 100%;
+}
+
+#calendar_container{
+	color: rgba(0,0,0,0.8);
+	height: 83%;
+	background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 90%, rgba(236,250,250,1) 100%);
+	border-color: rgba(1,1,1,0.2);
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0px 0px 15px 15px;
+}
+
+#index #login_window #calendar_page #calendar_container #day_of_week{
+	height: 25%;
+	font-size: 2.5em;
+}
+
+#index #login_window #calendar_page #calendar_container #day_of_month{
+	height: 45%;
+	line-height: 50%;
+	font-size: 11em;
+}
+
+#index #login_window #calendar_page #calendar_container #month{
+	height: 30%;
+	font-size: 2em;
+}
+
+
+
+#left_panel #info #calendar_page #calendar_container #day_of_week{
+	height: 25%;
+}
+
+#left_panel #info #calendar_page #calendar_container #day_of_month{
+	height: 45%;
+	line-height: 50%;
+	font-size: 8em;
+}
+
+#left_panel #info #calendar_page #calendar_container #month{
+	height: 30%;
+	padding-top: 10px;
+	font-size: 1.5em;
+}
+
+
+
+
+.vertical-center{
+	position: absolute;
+    top: 45%;
+    left: 50%;
+	  right: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+form[name=panelLogowania]>input{
+	  width: 40%;
+  padding: 5px 5px;
+  margin: 4px;
+  display: inline-block;
+	outline: none;
+	font-family: 'Open Sans';
+	font-weight: 600;
+}
+
+
+form[name=panelLogowania]>input.login{
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 3px;
+	color: rgba(0,0,0,0.7);
+  box-sizing: border-box;
+	transition: border 80ms ease-out 30ms, box-shadow 80ms ease-out 30ms;
+}
+
+form[name=panelLogowania]>input.login:focus{  
+  border: 1px solid rgba(255, 105, 97, 0.7);
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+form[name=panelLogowania]>input[type=submit]{
+	background: rgba(30, 144, 255,1);
+	color: rgba(255,255,255,1);
+	border-radius: 10px;
+	border: 1px solid rgba(0,0,0,0.2);
+	transition: background 80ms ease-out 30ms, box-shadow 80ms ease-out 30ms;
+}
+
+form[name=panelLogowania]>input[type=submit]:hover{
+	background: rgba(24, 114, 204,1);
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+	cursor: pointer;
+}
+
+form[name=panelLogowania]>input[type=submit]:active{
+	background: rgba(19, 89, 158,1);
+	box-shadow: 2px 2px 1px rgba(0,0,0,0.3);
+}
+
+
+/*menu*/
+
+
+
+#menu{
+	position: fixed;
+	width: 100%;
+	z-index: 3;
+}
+
+#menu ul{
+	list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  
+  background: linear-gradient(180deg, rgba(51,51,51,1) 51%, rgba(35,35,35,1) 100%);
+	box-shadow: 0px 2px 2px rgba(0,0,0,0.4);
+  position: fixed;
+  top: 0;
+	left: 0;
+  width: 100%;
+	font-family: 'Roboto';
+	font-weight: 300;
+	letter-spacing: 1.5px;
+}
+
+#menu ul li{
+	float: left;
+}
+
+#menu ul li a, #menu ul li>div{
+	display: block;
+	color: rgba(255,255,255,0.5);
+	text-align: center;
+	padding: 14px 16px 14px 16px;
+	transition: background 80ms ease-out 30ms, color 80ms ease-out 30ms;
+	text-decoration: none;
+}
+
+#menu ul li a:hover:not(.active), #menu ul li>div:hover:not(.active){
+	background: rgba(24, 114, 204,1);
+	color: rgba(255,255,255,1);
+	cursor: pointer;
+}
+
+#menu ul li a:active:not(.active), #menu ul li>div:active:not(.active){
+	background: rgba(19, 89, 158,1);
+	color: rgba(255,255,255,1);
+	cursor: pointer;
+}
+
+#dashboard #menu ul li a.dashboard, #settings #menu ul li a.settings, #panel_lesson #menu ul li a.panel_lesson, #panel_account #menu ul li a.panel_account{
+  background: rgba(19, 89, 158,1);
+	color: rgba(255,255,255,0.9);
+}
+
+#menu ul li.right{
+	float: right;
+}
+
+
+/*panel boczny*/
+#left_panel{
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 15%;
+	min-width: 250px;
+	height: 100%;
+	
+	background: rgb(50,50,52);
+  background: linear-gradient(90deg, rgba(50,50,52,1) 95%, rgba(34,34,34,1) 100%);
+	
+	z-index: 2;
+	color: rgba(255,255,255,0.8);
+	
+	border-left: 0.8em ridge rgba(24, 114, 204,0.9);/*solid? 0.45em*/
+	box-shadow: 2px 0px 3px rgba(0,0,0,0.5);
+
+}
+
+#info{
+	position: relative;
+	top: 15%;
+	left: 5%;
+	width:90%;
+}
+
+#info section{
+	margin-top: 15%;
+	margin-left: 10%;
+	font: 400 1.05em 'Roboto';
+	color: rgba(255,255,255,0.7);
+	letter-spacing: 1.5px;
+	line-height: 1.4em;
+}
+
+#info section hr{
+	width: 100%;
+	border: 1px inset rgba(255,255,255,0.4)
+}
+
+/*main window*/
+
+#main_window{
+	position: absolute;
+	top: 10%;
+	left: 20%;
+	height: 100%;
+	width: 78%;
+}
+
+/*calendar*/
+
+#calendar td{
+	width: 200px;
+	height: 100px;
+
+}
+
+#place{
+	position: absolute;
+	top: 27%;
+	width: 100%;
+}
+
+#calendar{
+	background: rgba(255,255,255,1);
+	padding: 20px;
+	
+	
+	box-shadow: 2px 2px 4px rgba(0,0,0,0.23);
+	border: 1px solid rgba(0,0,0,0.1);
+	
+	font-family: 'Roboto';
+}
+
+#calendar thead td{
+	font-weight: 400;
+	font-size: 1.3em;
+	color: rgba(0,0,0,0.5);
+		
+	border-bottom: 2px solid rgba(0,0,0,0.4);
+}
+
+#calendar tbody td{
+	font-weight: 600;
+	font-size: 2.8em;
+	color: rgba(0,0,0,0.7);
+	
+	position: relative;
+}
+
+#calendar td:last-child{
+	color: rgba(255,0,0,1);
+}
+
+/*lessons*/
+
+#calendar tbody td div{
+	z-index: 2;
+  position: absolute;
+	
+	height: 25%;
+	width: 90%;
+	padding-left: 2px;
+	font-size: 0.5em;
+	
+	
+	font-weight: 400;
+	color: rgba(0,0,0,0.5);
+	
+	border-radius: 4px;
+}
+
+#calendar tbody td section{
+	position: absolute;
+	z-index: 1;
+}
+
+.lesson_1{
+	bottom: 0%;
+}
+
+.lesson_2{
+	bottom: 25%;
+}
+
+.lesson_3{
+	bottom: 50%;
+}
+
+.lesson_4{
+	bottom: 75%;
+}
+
+/*categories*/
+
+.category_0{
+	background: rgba(221, 63, 63, 0.87);
+}
+
+
+.category_1{
+	background: rgba(146, 234, 128, 0.87);
+}
+
+
+.category_2{
+	background: rgba(122, 189, 230, 0.87);
+}
+
+.category_3{
+	background: rgba(108, 255, 42, 0.87);
+}
+
+/*additional info*/
+
+#calendar tbody td div>div{
+	position: absolute;
+	width: 100%;
+	height: auto;
+	padding: 5px;
+	font-size: 0.8em;
+  
+	background: rgba(255,255,255,1);
+	box-shadow: 2px 2px 4px rgba(0,0,0,0.23);
+	
+	border: 1px solid rgba(0,0,0,0.05);
+	
+	color: rgba(0,0,0,0.6);
+
+	display:none;
+
+}
+
+#calendar tbody td div:hover{
+	cursor: pointer;
+}
+
+#calendar tbody td div>div:hover{
+	cursor: context-menu;
+}
+
+/*Panel Kalendarza*/
+
+.btn{
+	font-family: 'Open Sans';
+	outline: none;
+	border-radius: 10px;
+	border: 1px solid rgba(0,0,0,0.2);
+	transition: background 80ms ease-out 30ms, box-shadow 80ms ease-out 30ms;
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+
+.btn:hover{
+		box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+	  cursor: pointer;
+}
+
+.btn:active{
+		box-shadow: 2px 2px 1px rgba(0,0,0,0.3);
+}
+
+.blue_btn{
+	background: rgba(30, 144, 255,1);
+	color: rgba(255,255,255,1);
+}
+
+.blue_btn:hover{
+	background: rgba(24, 114, 204,1);
+}
+
+.blue_btn:active{
+	background: rgba(19, 89, 158,1);
+}
+
+.normal_btn{
+	height: 50px;
+	width: 120px;
+	font-weight: 600;
+	font-size: 1.2em;
+	letter-spacing: 1px;
+}
+
+.calendar_input{
+	font-size: 6em;
+	font-family: 'Roboto';
+	font-weight: 300;
+	
+	color: rgba(0,0,0,0.7);
+	
+padding: 20px;
+	
+	text-align: center;
+
+	display: inline;
+	
+}
+
+#calendar_control>div{
+	display: inline;
+}
+
+.arrow_btn{
+	font-size: 2em;
+	display: inline;
+	
+	position: absolute;
+	top: 40%;
+	
+	background: rgb(255, 255, 255);
+	color: rgba(0,0,0,0.3);
+}
+
+.arrow_btn:hover{
+	background: rgb(240, 240, 240);
+	color: rgba(0,0,0,0.5);
+}
+
+.arrow_btn:active{
+	background: rgb(230, 230, 230);
+	color: rgba(0,0,0,0.7);
+	box-shadow: inset 2px 2px  4px rgba(0,0,0,0.2);
+}
+
+.arrow_btn:nth-child(1){
+left:5%;
+}
+
+.arrow_btn:nth-child(3){
+right:5%;
+}
+
+#calendar_control{
+	text-align: center;
+}
+
+#calendar_control{
+	position: absolute;
+	width: 100%;
+	background: linear-gradient(180deg, rgba(255,255,255,1) 92%, rgba(236,250,250,1) 100%);
+	border: 1px solid rgba(0,0,0,0.2);
+	border-radius: 15px 15px 15px 15px;
+	padding-top: 20px; 
+	padding-bottom: 10px; 
+	
+	height: 12em;
+}
+
+#calendar_caller{
+	position: absolute;
+	top: 10%;
+	right: 10%;
+}
+
+#admin_calendar_controll{
+	position: absolute;
+	text-align: center;
+	
+	top: 15%;
+	left: 0%;
+	width: 100%;
+	height: 50%;
+	
+	color: rgba(0,0,0,0.5);
+	
+	font-family: 'Roboto';
+	font-size: 1.4em;
+}
+
+#admin_calendar_controll>div{
+	width: 25%;
+	position: absolute;
+	top: 0%;
+}
+
+#sent_prefrence_box{
+	left: 0%;
+}
+
+#sent_teacher_box, #sent_student_box{
+	left: 33%;
+}
+
+#basic_calendar_controll{
+	position: absolute;
+	width: 100%;
+	left:0%;
+	top: 40%;
+}
+
+
+
+
+#admin_calendar_controll select{
+	outline: none;
+	font-size: 0.7em;
+	font-family: 'Roboto';
+	font-weight: 400;
+	  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 5px;
+	color: rgba(0,0,0,0.7);
+	transition: border 80ms ease-out 30ms, box-shadow 80ms ease-out 30ms;
+	box-sizing: border-box;
+}
+
+#admin_calendar_controll select optgroup{
+	font-family: 'Roboto';
+}
+
+
+#admin_calendar_controll select:focus{  
+  border: 1px solid rgba(0,0,0,0.5);
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+#sent_student_box, #sent_teacher_box{
+	display: none;
+}
+
+
+
+/*Ustawienia*/
+
+#liner{
+background: linear-gradient(180deg, rgba(255,255,255,1) 92%, rgba(236,250,250,1) 100%);
+padding: 4%;
+border-radius: 10px;
+	border: 1px solid rgba(0,0,0,0.1);
+	
+	position: absolute;
+	top: 20%;
+	left: 20%;
+	
+	width: 50%;
+}
+
+.title{
+  font-family: 'Roboto';
+	font-size: 1.7em;
+	font-weight: 400;
+	color: rgba(0,0,0,0.6);
+	
+	border-bottom: 4px groove rgba(0,0,0,0.5);
+	width: 95%
+}
+
+#liner div{
+	font-family: 'Roboto';
+}
+
+#liner div:not(.title,#matching_password_display, #change_password_display, #add_account_display){
+	
+	font-size: 1.1em;
+	font-weight: 400;
+	
+	padding-left: 3%;
+	
+	color: rgba(0,0,0,0.5);
+}
+
+.btn_box{
+	width: 90%;
+	padding-bottom: 10%;
+  text-align: right;
+}
+
+.small_btn{
+	height: 30px;
+	width: 110px;
+	font-weight: 600;
+	font-size: 0.7em;
+	letter-spacing: 1px;
+	border-radius: 8px;
+}
+
+.wide_btn{
+	width: 170px;
+}
+
+
+
+.blue_btn:disabled{
+	background: rgb(100, 178, 255);
+}
+
+
+form input[type=text], form input[type=password]{
+	width: 30%;
+  padding: 5px 5px;
+  margin: 4px;
+  display: inline-block;
+	outline: none;
+	font-family: 'Open Sans';
+	font-weight: 600;
+}
+
+
+form input[type=text], form input[type=password]{
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 3px;
+	color: rgba(0,0,0,0.7);
+  box-sizing: border-box;
+	transition: border 80ms ease-out 30ms, box-shadow 80ms ease-out 30ms;
+}
+form input[type=text]:focus, form input[type=password]:focus{  
+  border: 1px solid rgba(255, 105, 97, 0.7);
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+#matching_password_display, #change_password_display, #add_account_display{
+	color: rgba(255,0,0,0.7);
+	font-size: 1em;
+	letter-spacing: 1px;
+	font-weight: 400;
+}
+
+
+
+
+.password_error_display{
+	display: none;
+	border: 1px solid rgba(0,0,0,0.1);
+	border-radius: 5px;
+	padding: 5%;
+	margin-bottom: 5%;
+}
+
+.red_btn{
+	background: rgb(221, 53, 53);
+	color: rgba(255,255,255,1);
+}
+
+.red_btn:hover{
+	background: rgb(227, 1, 1);
+}
+
+.red_btn:active{
+	background: rgb(198, 1, 1);
+}
+
+#liner select{
+	outline: none;
+	font-size: 0.8em;
+	font-family: 'Roboto';
+	font-weight: 400;
+	  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 5px;
+	color: rgba(0,0,0,0.7);
+	transition: border 80ms ease-out 30ms, box-shadow 80ms ease-out 30ms;
+	box-sizing: border-box;
+}
+
+#liner div{
+	padding-bottom: 2%;
+}
+
+#liner select optgroup{
+	font-family: 'Roboto';
+}
+
+
+#liner select:focus{  
+  border: 1px solid rgba(0,0,0,0.5);
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+
+
+#liner div thead td{
+	font-size: 1.2em;
+	color: rgba(0,0,0,0.7);
+	border-bottom: 1px solid rgba(0,0,0,0.4);
+}
+
+#liner div tbody td{
+font-size: 1em;
+	color: rgba(0,0,0,0.6);
+}
+
+#liner div tbody td:nth-child(9){
+text-align: center;
+}
+
+#liner div tbody tr:nth-child(even){
+background: rgba(0,0,0,0.1);
+}
+
+#liner div.table_display, #liner table{
+	width: 100%;
+}
+
+#panel_account #liner .red_btn, #panel_lesson #liner .red_btn{
+	margin-top: 2%;
+}
+
+#panel_account #liner, #panel_lesson #liner{
+	left: 6%;
+	width: 80%;
+}
+
+/*errors*/
+
+
+.msg_display{
+	display: none;	
+  position: absolute;
+	width: 100%;
+	height: 10%;
+	z-index: 2;	
+	border-radius: 5px;
+	color: rgba(255,255,255,1);
+	font-family: 'Roboto';
+	font-size: 1.8em;	
+	padding: 1%;	
+  cursor: pointer;
+  transition: background 300ms ease-out 100ms;
+}
+
+#general_error_display{
+	background: rgba(255,0,0,0.8);	
+}
+
+#general_error_display:hover{
+	background: rgba(255,0,0,0.9);
+}
+
+#general_succes_display{
+	background: rgba(66, 66, 189, 0.8);	
+}
+
+#general_succes_display:hover{
+	background: rgba(81, 81, 255, 0.9);
+}
+
+.msg_display div{
+	position: absolute;
+	right: 1%;
+}
+
+#login_error_display{
+	margin-top: 20px;
+	font-family: 'Open Sans';
+  font-size: 1.2em;
+	font-weight: 500;
+}
+
+td.today{
+	border: 5px outset rgba(255,0,0,0.8);
+	border-radius: 3px;
+}
